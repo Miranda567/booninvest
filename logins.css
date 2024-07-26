@@ -71,3 +71,7 @@ button:hover {
 h1 {
   font-size: 16px;
 }
+.linklogin {
+  text-decoration: none;
+  color: #007bff;
+}
