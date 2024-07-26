@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BoonGrowth Login Page</title>
+    <link rel="stylesheet" href="logins.css">
+</head>
+<body>
+  
+    <div class="login-container">
+        <h2>Login</h2>
+        
+        <div class="col-xs-12"><div class="text-center vertical-offset-md row"><div class="col-xs-12"></div></div><div class="row"></div>
+        
+        
+        <h1 tabindex="-1" class="">Login to proceed</h1>
+            <div class="input-group">
+                 <form id="signin-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br><br>
+        <button type="submit">Sign In</button>
+    </form>
+    <p style="text-align:center; text-decoration: none;">Don't have an account? <a href="signup.html" class="linklogin">Register Now</a></p>
+<br>
+
+<p style="text-align:center; text-decoration: none;"><small>
+© Copyright  2024  Boongrowth Capital  All Rights Reserved.</small></p>
+
+
+        <p id="error-message" class="error-message"></p>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var firebaseConfig = {
+  apiKey: "AIzaSyAtVvPjdsj84mWqaG4-7SyjbljCnslZ1SM",
+  authDomain: "hendaa-1.firebaseapp.com",
+  databaseURL: "https://hendaa-1-default-rtdb.firebaseio.com",
+  projectId: "hendaa-1",
+  storageBucket: "hendaa-1.appspot.com",
+  messagingSenderId: "831134776479",
+  appId: "1:831134776479:web:56cd7098fc69cd70a376aa"
+};
+        firebase.initializeApp(firebaseConfig);
+        
+        // Initialize Firebase services
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+
+        // Function to handle user sign-in
+        function signIn(email, password) {
+            auth.signInWithEmailAndPassword(email, password)
+                .then((cred) => {
+                    // Check if the user document exists in Firestore
+                    const userId = cred.user.uid;
+                    const userRef = db.collection('users').doc(userId);
+
+                    userRef.get().then((doc) => {
+                        if (!doc.exists) {
+                            // If the user document doesn't exist, create it with balance set to zero
+                            userRef.set({
+                                balance: 0
+                            }).then(() => {
+                                console.log("User document created with balance set to zero.");
+                            }).catch((error) => {
+                                console.error("Error creating user document:", error);
+                            });
+                        } else {
+                            console.log("User document already exists.");
+                        }
+                        // Redirect the user to the desired page after sign-in
+                        window.location.href = "wow.html";
+                    }).catch((error) => {
+                        console.error("Error getting user document:", error);
+                    });
+                })
+                .catch((error) => {
+                    alert(error.message);
+                });
+        }
+
+        // Event listener for form submission
+        document.getElementById('signin-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            signIn(email, password);
+        });
+    </script>
+    <!-- Firebase SDK -->
+    
+    <!-- Your JavaScript file -->
+    <script src="app.js"></script>
+</body>
+      </html>
