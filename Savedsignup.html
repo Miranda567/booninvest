@@ -1,0 +1,230 @@
+
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="login.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Source+Sans+Pro:wght@600;700&display=swap"
+    rel="stylesheet">
+  
+    
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="index.html">
+        <h1 class="logo">Boon</h1>
+      </a>
+
+
+
+
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+        
+
+         <section class="section features" id="features">
+        <div class="container">
+
+     
+                    <h2 class="h2 section-title underline">Welcome!
+        </h2>
+        
+      <section class="contact" id="contact">   <div class="container">
+
+          <h2 class="h2 section-title">Sign up</h2>
+
+          <p class="card-text" style="text-align:center;">
+            Sign-in To proceed
+          </p>
+            <div id="error-message" class="error-message"></div>
+
+          <div class="contact-wrapper">
+
+            <form id="signup-form" class="contact-form">
+<f
+              <div class="wrapper-flex">
+
+                <div class="input-wrapper">
+                  <label for="name">Full Name</label>
+
+                  <input type="text" name="name" id="name" required placeholder="Enter Your Full name" class="input-field">
+                </div>
+                 <div class="input-wrapper">
+                  <label for="name">Email</label>
+
+                  <input type="email" name="name" id="email" required placeholder="Enter Your email" class="input-field">
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="password">Password</label>
+
+                  <input type="password" name="password" id="password" required placeholder="Enter Your Password"
+                    class="input-field">
+                </div>
+                
+
+                        <button type="submit" class="cta-form-btn" value="Sign Up">Register</button>
+                        </div>
+                        </div>
+            </form>
+            </ul>
+                                 <p style="text-align:center;"> Already have an account? </p><a href="signin.html" style="margin-left:150px;">Login</a></p>
+          </div>
+        </div>
+      </section>
+
+
+
+         
+
+  
+
+  <footer class="footer">
+
+    <div class="footer-top section">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="index" class="logo">Boon</a>
+
+          <p class="text">
+            Let's collaborate to identify your current priorities and work towards building a brighter future for you and your family.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=61559870982135" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+</ul>
+
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top  active" aria-label="Go To Top" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+<script>
+  // Firebase configuration
+  var firebaseConfig = {
+  apiKey: "AIzaSyAtVvPjdsj84mWqaG4-7SyjbljCnslZ1SM",
+  authDomain: "hendaa-1.firebaseapp.com",
+  databaseURL: "https://hendaa-1-default-rtdb.firebaseio.com",
+  projectId: "hendaa-1",
+  storageBucket: "hendaa-1.appspot.com",
+  messagingSenderId: "831134776479",
+  appId: "1:831134776479:web:56cd7098fc69cd70a376aa"
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Get a reference to the authentication service
+  var auth = firebase.auth();
+
+  // Get a reference to the Firestore database
+  var db = firebase.firestore();
+
+  // Get the sign-up form
+  var signUpForm = document.getElementById('signup-form');
+
+  // Get the error message div
+  var errorMessageDiv = document.getElementById('error-message');
+
+  // Handle sign-up form submission
+  signUpForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Clear previous error messages
+    errorMessageDiv.textContent = '';
+
+    // Get user input
+    var name = signUpForm['name'].value;
+    var email = signUpForm['email'].value;
+    var password = signUpForm['password'].value;
+
+    // Create user with email and password
+    auth.createUserWithEmailAndPassword(email, password)
+      .then(function(userCredential) {
+        // Signed up successfully, now add user data to Firestore
+        var user = userCredential.user;
+        return db.collection('users').doc(user.uid).set({
+                    name: name,
+          email: email,
+          balance: 0,
+          totalProfit: 0,
+          depositBalance: 0,
+          withdrawalBalance: 0,
+          bonus: 0 
+        });
+      })
+      .then(function() {
+        // Redirect user to dashboard or any other page
+        window.location.href = 'user-dashs.html';
+      })
+      .catch(function(error) {
+        // Handle errors
+        var errorMessage = error.message;
+        errorMessageDiv.textContent = errorMessage;
+      });
+  });
+</script>
+
+</body>
+
+</html>
