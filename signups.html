@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  
+    <div class="login-container">
+        <h2>Create Account</h2>
+        
+        <div class="col-xs-12"><div class="text-center vertical-offset-md row"><div class="col-xs-12"></div></div><div class="row"></div>
+        
+        
+        <h1 tabindex="-1" class="">Sign up to proceed!</h1>
+            <div class="input-group">
+                 <form id="signup-form">
+                           <label for="email">Full Name:</label>
+        <input type="text" id="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br><br>
+        <button type="submit">Sign In</button>
+    </form>
+<p style="text-align:center; text-decoration: none;">Already have an account? <a href="#" class="linklogin">Login</a></p>
+<br>
+
+<p style="text-align:center; text-decoration: none;"><small>
+© Copyright  2024  Boongrowth Capital  All Rights Reserved.</small></p>
+                                
+                                    </div>
+        <p id="error-message" class="error-message"></p>
+    </div>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+<script>
+  // Firebase configuration
+  var firebaseConfig = {
+  apiKey: "AIzaSyAtVvPjdsj84mWqaG4-7SyjbljCnslZ1SM",
+  authDomain: "hendaa-1.firebaseapp.com",
+  databaseURL: "https://hendaa-1-default-rtdb.firebaseio.com",
+  projectId: "hendaa-1",
+  storageBucket: "hendaa-1.appspot.com",
+  messagingSenderId: "831134776479",
+  appId: "1:831134776479:web:56cd7098fc69cd70a376aa"
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Get a reference to the authentication service
+  var auth = firebase.auth();
+
+  // Get a reference to the Firestore database
+  var db = firebase.firestore();
+
+  // Get the sign-up form
+  var signUpForm = document.getElementById('signup-form');
+
+  // Get the error message div
+  var errorMessageDiv = document.getElementById('error-message');
+
+  // Handle sign-up form submission
+  signUpForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Clear previous error messages
+    errorMessageDiv.textContent = '';
+
+    // Get user input
+    var name = signUpForm['name'].value;
+    var email = signUpForm['email'].value;
+    var password = signUpForm['password'].value;
+
+    // Create user with email and password
+    auth.createUserWithEmailAndPassword(email, password)
+      .then(function(userCredential) {
+        // Signed up successfully, now add user data to Firestore
+        var user = userCredential.user;
+        return db.collection('users').doc(user.uid).set({
+                    name: name,
+          email: email,
+          balance: 0,
+          totalProfit: 0,
+          depositBalance: 0,
+          withdrawalBalance: 0,
+          bonus: 0 
+        });
+      })
+      .then(function() {
+        // Redirect user to dashboard or any other page
+        window.location.href = 'user-dashs.html';
+      })
+      .catch(function(error) {
+        // Handle errors
+        var errorMessage = error.message;
+        errorMessageDiv.textContent = errorMessage;
+      });
+  });
+</script>
+
+    <!-- Firebase SDK -->
+    
+    <!-- Your JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
