@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoonGrowth Capital</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+<style>
+          h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            background: #FFFFFF;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        buttonn {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+                .alert {
+            color: #d9534f;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+                .containera {
+  background: hsl(228, 50%, 96%);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 20px 20px 20px; /* Add margin on both sides */
+}
+
+.containera img {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+.containera h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #222;
+      font-family: var(--ff-quicksand);
+}
+
+.containera p {
+    margin-bottom: 20px;
+    color: #111;
+      font-family: var(--ff-quicksand);
+}
+
+.learn-more-btn {
+    background-color: #3399ff;
+    color: #fff;
+    align-items: center;
+    margin-left: 90px;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.learn-more-btn:hover {
+    background-color: #023036;
+}
+.btn-primary {
+  border: 0;
+  background-color: green;
+  border-radius: 0;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: .1s;
+  outline: 0;
+  box-shadow: none;
+  font-family: 'roboto', sans-serif;
+}
+btn-primary:hover {
+  color: #fff;
+}
+  
+  
+  
+</style>
+
+  <!-- 
+    - preload images
+  -->
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="index.html" class="logo">BoonGrowth Capital</a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="index.html" class="logo">BoonGrowth Capital</a>
+
+          <button class="nav-close-btn" aria-label="Clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-link>
+              <span>Home</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link" data-nav-link>
+              <span>About</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="plans.html" class="navbar-link" data-nav-link>
+              <span>Investment Plans</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blog.html" class="navbar-link" data-nav-link>
+              <span>Blog</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>
+              <span>Contact</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+   <li class="navbar-item">
+            <a href="signup.html" class="navbar-link" data-nav-link>
+              <span>Create account</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="signin.html" class="navbar-link" data-nav-link>
+              <span>Login</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <div class="header-contact">
+
+        <div>
+          <p class="contact-label">Free Call In U.S.A</p>
+
+          
+        </div>
+
+        <div class="contact-icon">
+          <ion-icon name="call-outline"></ion-icon>
+        </div>
+
+      </div>
+
+      <button class="nav-open-btn" aria-label="Open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" aria-label="home" id="home"
+        style="background-image: url('immn.jpg')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h2 class="h1 hero-title">
+              <span class="span">Empower your  </span>financial future with us </h2>
+
+            <p class="hero-text">
+              Earn more interest than your average savings account – and watch your money grow.
+             Grow your wealth wisely, with guidance
+and support at every turn. Join BoonGrow
+today, and let's shape your financial future.
+             </p>
+
+            <a href="signup.html" class="btn-outline">Get Started</a>
+
+            <img src="hero-shape.png" width="116" height="116" loading="lazy"
+              class="hero-shape shape-1">
+
+            <img src="hero-shape.png" width="116" height="116" loading="lazy"
+              class="hero-shape shape-2">
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <figure class="about-banner img-holder" style="--width: 420; --height: 400;">
+            <img src="image5.jpg" width="600" height="720" loading="lazy" alt=""
+              class="img-cover">
+
+            <img src="about-shape-1.png" width="100" height="70" loading="lazy" alt=""
+              class="abs-img abs-img-1">
+
+            <img src="about-shape-2.png" width="500" height="500" loading="lazy" alt=""
+              class="abs-img abs-img-2">
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle">Simple & secure access to<br> invest , Grow financially </p>
+
+            <h2 class="h2 section-title">Start realizing your financial goals with BoonGrow: Your Path to Prosperity</h2>
+
+            <p class="section-text">
+            BoonGrow is a comprehensive investment platform designed to empower individuals to grow their<br> wealth intelligently through a range of investment opportunities. Whether you're a novice investor looking to dip your toes into the market or an experienced trader seeking advanced tools, BoonGrow offers a user-friendly interface<br> coupled with robust features to cater to <br>your financial goals.
+            </p><br>
+ <p class="section-subtitle">Why choose us </p>
+            <ul class="about-list">
+
+              <li class="about-item">
+                <div class="about-icon">
+                  <ion-icon name="chevron-forward"></ion-icon>
+                </div>
+
+                     <p class="about-text"><strong>USER FRIENDLY INTERFACE</strong><br>
+                  BoonGrow's intuitive interface makes investing accessible to users of all experience levels We boast a team of seasoned financial experts who meticulously analyze the market and identify investment opportunities that have the potential to deliver strong returns
+                </p>
+              </li>
+
+              <li class="about-item">
+                <div class="about-icon">
+                  <ion-icon name="chevron-forward"></ion-icon>
+                </div>
+
+                <p class="about-text"><strong>TESTED AND TRUSTED</strong>
+                <br> We value transparency and believe in building long-term relationships based on trust. We provide clear and concise information about our investment opportunities, ensuring that you are fully aware of the risks and potential rewards associated with each option<br>
+                Join thousands of satisfied customers who have entrusted us with their investments
+                </p>
+              </li>
+
+              <li class="about-item">
+                <div class="about-icon">
+                  <ion-icon name="chevron-forward"></ion-icon>
+                </div>
+
+                <p class="about-text">
+                  <strong>FULL SECURITY</strong><br>
+                  Rest assured knowing that your funds and personal information are fully secure.
+                  rest assured knowing that your personal and financial information is protected by state-of-the-art security measures we offer a wide range of investment options to suit different preferences and risk profiles. From stocks and bonds to real estate and alternative investments, we provide a diversified portfolio to maximize your returns while managing risk
+                </p>
+              </li>
+            </ul>
+
+            <a href="about.html" class="btn">Learn More</a>
+
+          </div>
+
+        </div>
+      </section>
+
+     <ul class="stats-list">
+
+              <li class="stats-card">
+                <p class="h3 stats-title">$1M+</p>
+
+                <p class="stats-text">Clients build their wealth with Boon</p>
+              </li>
+
+  <li class="stats-card">
+                <p class="h3 stats-title">$11+ Billion </p>
+
+                <p class="stats-text"> in Clients Assets</p>
+              </li>
+
+              <li class="stats-card">
+                <p class="h3 stats-title">Security</p>
+
+                <p class="stats-text">Custody of securities with
+a American custodian bank</p>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+           </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+        </section>
+      
+      
+      
+            <section class="section blog" aria-label="blog" id="blog">
+        <div class="container">
+
+          <p class="section-subtitle">A CHANCE TO OWN
+BLOCKCHAIN ASSETS</p>
+
+          <h2 class="h2 section-title">We're available to assist you</h2>
+           <p class="card-text">
+                    Blockchain assets represent both present and future wealth. Boonpleasure.com offers investors the 
+                  </p>
+          <ul class="blog-list grid-list">
+            
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 770; --height: 500;">
+                  <img src="pic2.png" width="770" height="500" loading="lazy"
+                    alt="At the end of the day, going forward, a new normal that has evolved from. your only logistic partner."
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+     <h3 class="h3 section-title">We are dedicated to creating long-term financial prosperity for our investors through sustainable means</h3>
+          <ul class="blog-list grid-list">
+                  
+<p class="card-text">
+  Our crypto hedge funds focus on investing in Blockchain technology and participating in early token sales. Our overarching goal is to revolutionize investment approaches for token sales. Investing with Boonpleasure.com entails:
+</p>
+                  
+
+                 
+                       <ul class="about-list">
+
+              <li class="about-item">
+                <div class="about-icon">
+                  <ion-icon name="chevron-forward"></ion-icon>
+                </div>
+
+                     <p class="about-text">
+                   The protocol is owned by investors
+                </p>
+              </li>
+    
+              <li class="about-item">
+                <div class="about-icon">
+                  <ion-icon name="chevron-forward"></ion-icon>
+                </div>
+
+                     <p class="about-text">Investors benefit from the growth of tokens
+                </p>
+              </li>
+
+     
+
+              <li class="about-item">
+                <div class="about-icon">
+                  <ion-icon name="chevron-forward"></ion-icon>
+                </div>
+
+                     <p class="about-text"> Investors gain from the Blockchain
+                </p>
+              </li>
+                
+              <li class="about-item">
+                <div class="about-icon">
+                  <ion-icon name="chevron-forward"></ion-icon>
+                </div>
+
+                     <p class="about-text">Returns on investments are supported by smart contracts
+                </p>
+              </li>
+
+
+                
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+      
+       <section class="section skills" id="skills">
+        <div class="container">
+          <h2 class="h2 section-title">POPULAR TRADING PLANS</h2>
+
+          <p class="section-text">
+           We offer a plan for every investor. Here are some of our popular trading plans. We're confident you'll find one that suits your budget and goals
+          </p>
+
+          <ul class="skills-list">
+                <div class="blog-card">
+            <h2 class="h2" style="text-align:center;">BEGINNER</h2>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class=" skills-title">Profit</h3>
+
+                <data class="skills-data" value="95">5-8%</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 95%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Duration</h3>
+
+                <data class="skills-data" value="75">7 Days</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 75%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Minimum Deposit</h3>
+
+                <data class="skills-data" value="90">$100</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 90%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Maximum Withdrawal</h3>
+
+                <data class="skills-data" value="70">$1000</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 70%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Withdrawal</h3>
+
+                <data class="skills-data" value="80">Daily</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 80%"></div>
+              </div>
+            </li>
+<br>
+                <a href="signup.html" class="btn-link">
+                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                  <span class="bt">INVEST NOW</span>
+                </a>
+                <br>
+                   <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 100%"></div>
+                </div>
+</ul>
+<br>
+   <ul class="skills-list">
+                <div class="blog-card">
+            <h2 class="h2" style="text-align:center;">BASIC</h2>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class=" skills-title">Profit</h3>
+
+                <data class="skills-data" value="95">8-10%</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 95%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Duration</h3>
+
+                <data class="skills-data" value="75">14 Days</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 75%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Minimum Deposit</h3>
+
+                <data class="skills-data" value="90">$200</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 90%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Maximum Withdrawal</h3>
+
+                <data class="skills-data" value="70">$1500</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 70%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Withdrawal</h3>
+
+                <data class="skills-data" value="80">Daily</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 80%"></div>
+              </div>
+            </li>
+<br>
+                <a href="signup.html" class="btn-link">
+                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                  <span class="bt">INVEST NOW</span>
+                </a>
+                <br>
+                   <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 100%"></div>
+                </div>
+</ul>
+<br>
+   <ul class="skills-list">
+                <div class="blog-card">
+            <h2 class="h2" style="text-align:center;">REGULAR</h2>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class=" skills-title">Profit</h3>
+
+                <data class="skills-data" value="95">10-15%</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 95%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Duration</h3>
+
+                <data class="skills-data" value="75">21 Days</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 75%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Minimum Deposit</h3>
+
+                <data class="skills-data" value="90">$400</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 90%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Maximum Withdrawal</h3>
+
+                <data class="skills-data" value="70">$2,200</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 70%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Withdrawal</h3>
+
+                <data class="skills-data" value="80">Daily</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 80%"></div>
+              </div>
+            </li>
+<br>
+                <a href="signup.html" class="btn-link">
+                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                  <span class="bt">INVEST NOW</span>
+                </a>
+                <br>
+                   <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 100%"></div>
+                </div>
+</ul>
+<br>
+   <ul class="skills-list">
+                <div class="blog-card">
+            <h2 class="h2" style="text-align:center;">PROFESSIONAL</h2>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class=" skills-title">Profit</h3>
+
+                <data class="skills-data" value="95">15-25%</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 95%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Duration</h3>
+
+                <data class="skills-data" value="75">30 Days</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 75%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Minimum Deposit</h3>
+
+                <data class="skills-data" value="90">$500</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 90%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Maximum Withdrawal</h3>
+
+                <data class="skills-data" value="70">$5000</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 70%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Withdrawal</h3>
+
+                <data class="skills-data" value="80">Daily</data>
+              </div>
+
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 80%"></div>
+              </div>
+            </li>
+<br>
+                <a href="signup.html" class="btn-link">
+                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                  <span class="bt">INVEST NOW</span>
+                </a>
+                <br>
+                   <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 100%"></div>
+                </div>
+</ul>
+</section>
+      <div class="containera">
+    <h1>Investment Calculator</h1>
+    <label for="plan">Select Plan:</label>
+    <select id="plan">
+        <option value="1">Plan 1 (Min $100, Max $1000, 1.5% daily)</option>
+        <option value="2">Plan 2 (Min $200, Max $2000, 2.0% daily)</option>
+        <option value="3">Plan 3 (Min $300, Max $3000, 3.5% daily)</option>
+    </select>
+    
+    <label for="amount">Investment Amount:</label>
+    <input type="number" id="amount" min="0" placeholder="Enter amount">
+    
+    <label for="days">Duration (days):</label>
+    <input type="number" id="days" min="0" placeholder="Enter duration in days">
+
+    <button onclick="calculateProfit()" class="btn-primary">Calculate Profit</button>
+
+        <div class="alert" id="alert" style="display:none;"></div>
+    <div class="result" id="result"></div>
+</div>
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" id="service" aria-label="service">
+        <div class="container">
+
+          <p class="section-subtitle">Others Investment plans</p>
+
+          <h2 class="h2 section-title">Trusted </h2>
+
+          <p class="section-text">
+            Explore the best financial freedom
+          </p>
+
+          <ul class="service-list grid-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="herome.png" width="80" height="80" loading="lazy" alt="Truck">
+                </div>
+
+                <h3 class="h3 card-title">
+                  <span class="span"></span> Our funds are diversified to include protocols and blockchain companies
+                </h3>
+
+                <p class="card-text">
+                  Our funds focus on tokens that incentivize the core actions of a protocol and/or excel in developing novel mechanisms for smart contracts. In addition, we invest in early token sales that interact with an actual business or product in the blockchain ecosystem.
+                </p>
+
+                <a href="signup.html" class="btn-link">
+                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                  <span class="bt">Invest Now</span>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="neon.png" width="94" height="60" loading="lazy" alt="Ship">
+                </div>
+
+                <h3 class="h3 card-title">
+                  <span class="span"></span> 
+                Investors are benefiting from our expanding range of cryptoassets</h3>
+
+                <p class="card-text">
+                  Our cryptocurrency asset class includes cryptoasset trading and HODLing, as well as protocols and smart contracts, enabling investors to gain from the rising value of cryptoassets and profits from successful trades
+                </p>
+
+                <a href="signup.html" class="btn-link">
+                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                  <span class="bt">Invest Now</span>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="overlayy.jpg" width="80" height="80" loading="lazy" alt="Airplane">
+                </div>
+
+                <h3 class="h3 card-title">
+                  <span class="span"></span> Blockchain
+                </h3>
+
+                <p class="card-text">
+                  Blockchain investments benefit from the value generated by decentralized application activities and systems
+                </p>
+
+                <a href="signup.html" class="btn-link">
+                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                  <span class="bt">Invest Now</span>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="signal.jpg" width="80" height="80" loading="lazy" alt="Train">
+                </div>
+
+                <h3 class="h3 card-title">
+                  <span class="span"></span>Cryptocurrencies & Funds
+                </h3>
+
+                <p class="card-text">
+                This portfolio allows investors to enjoy the combined advantages of cryptoassets and other hedge funds
+                </p>
+
+                <a href="cryptos.html" class="btn-link">
+                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                  <span class="bt">Invest Now</span>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="collect.jpg" width="83" height="80" loading="lazy" alt="Trolley">
+                </div>
+
+                <h3 class="h3 card-title">
+                  <span class="span"></span> Boongrowth LP
+                </h3>
+
+                <p class="card-text">
+                  Our BoonGrowth.com LP fund is one of our funds which gives investors direct profit opportunity.
+                </p>
+
+                <a href="signup.html" class="btn-link">
+                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                  <span class="bt">Invest Now</span>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="main3.jpg" width="86" height="80" loading="lazy" alt="Paper">
+                </div>
+
+                <h3 class="h3 card-title">
+                  <span class="span"></span>Smart Contracts
+                </h3>
+
+                <p class="card-text">
+                  Smart contracts allow investors to profit from leveraging agreements and transaction returns
+                </p>
+
+                <a href="signup.html" class="btn-link">
+                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                  <span class="bt">Invest Now</span>
+                </a>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+          <!--
+            - CTA
+          -->
+
+          <div class="cta-container">
+
+            <img src="signal.jpg" alt="summer collection" class="cta-banner">
+
+            <a href="signup.html" class="cta-content">
+
+              <p class="discount">25% Deposit Bonus</p>
+
+              <h2 class="cta-title">On First Deposit</h2>
+
+              <p class="cta-text">Starting @ $10</p>
+
+              <button href="signup.html" class="btn">Invest Now</button>
+
+            </a>
+
+          </div>
+
+      <!-- 
+        - #FEATURE
+      -->
+
+      <section class="section feature" aria-label="feature">
+        <div class="container">
+
+          <div class="title-wrapper">
+
+            <div>
+              <p class="section-subtitle">Estimation</p>
+
+              <h2 class="h2 section-title">The success of our company is deeply connected with the culture embraced by our customers!</h2>
+
+              <p class="section-text">
+                As a company, prioritizing our clients is paramount, as we understand that they are the foundation of our business. Our internal corporate culture is geared towards delivering products tailored to meet human needs
+              </p>
+            </div>
+
+            <a href="signup.html" class="btn">Start Investing</a>
+
+          </div>
+
+          <ul class="feature-list grid-list">
+
+            <li>
+              <div class="feature-card" style="--card-number: '01'">
+
+                <div class="card-icon">
+                  <img src="smile.jpg" width="72" height="91" alt="">
+                </div>
+
+                <h3 class="h3 card-title">INVEST ON YOUR OWN</h3>
+
+                <p class="card-text">
+                  Regardless of your investing background, whether you're a novice or seasoned investor, we provide a variety of services to assist you as your financial requirements change with time
+                </p>
+
+
+
+              </div>
+            </li>
+
+            <li>
+              <div class="feature-card" style="--card-number: '02'">
+
+                <div class="card-icon">
+                  <img src="wide.jpg" width="94" height="94" alt="">
+                </div>
+
+                <h3 class="h3 card-title">Access everything in one place</h3>
+
+                <p class="card-text">
+                    Easily manage, transfer, and move funds between your BoonGrowth investment and Trading accounts
+                </p>
+
+                
+
+              </div>
+            </li>
+
+            <li>
+              <div class="feature-card" style="--card-number: '03'">
+
+                <div class="card-icon">
+                  <img src="tools.jpg" width="93" height="93" alt="">
+                </div>
+
+                <h3 class="h3 card-title">Reliable advice</h3>
+
+                <p class="card-text">
+                  Gain access to market research and tap into the collective expertise of our specialists, all supported by the robustness and security of a global investing leader
+                </p>
+
+
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PROJECT
+      -->
+
+      <section class="section project" aria-label="project">
+        <div class="container">
+
+          <p class="section-subtitle">BoonGrowth</p>
+
+          <h2 class="h2 section-title">Follow these three simple steps to join us!</h2>
+
+          <p class="section-text">
+            How to invest with BoonGrowth Capital 
+          </p>
+
+          <ul class="project-list">
+
+            <li class="project-item">
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
+                  <img src="logo.png" width="397" height="352" loading="lazy"
+                    alt="Warehouse inventory" class="img-cover">
+                </figure>
+
+                <button class="action-btn" aria-label="View image">
+                  <ion-icon name="expand-outline"></ion-icon>
+                </button>
+
+                <div class="card-content">
+               
+
+                  <h3 class="h3">
+                    <a href="signup.html" class="card-title">Open An account</a>
+                  </h3>
+                     <p class="card-text"> Visit Our Website: Navigate to our homepage and click on the "Sign Up" button..</p><hr>
+                     <p class="card-text">Fill Out the Registration Form: Provide your personal details, including your name, email address, and phone number.</p><hr>
+                           <p class="card-text">Set Up Security Measures: Choose a strong password and enable two-factor authentication to secure your account</p>
+                                 <p class="card-tag"></p>
+                     
+
+                  
+                </div>
+
+              </div>
+            </li>
+
+            <li class="project-item">
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
+                  <img src="overlay-image.jpg" width="397" height="352" loading="lazy"
+                    alt="Warehouse inventory" class="img-cover">
+                </figure>
+
+                <button class="action-btn" aria-label="View image">
+                  <ion-icon name="expand-outline"></ion-icon>
+                </button>
+
+                <div class="card-content">
+                  
+  <h3 class="h3">
+                    <a href="signup.html" class="card-title"></a>FUND YOUR ACCOUNT
+                  </h3>
+                     <p class="card-text"> Fund Your Account: Select your preferred payment method and deposit funds to start trading</p><hr>
+                   
+                       <p class="card-text"> Choose a Trading Plan: Browse our various trading plans and select the one that best fits your investment goals and budget</p>
+                   
+              </div>
+            </li>
+
+            <li class="project-item">
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
+                  <img src="happyinvestor.jpg" width="397" height="352" loading="lazy"
+                    alt="Warehouse inventory" class="img-cover">
+                </figure>
+
+                <button class="action-btn" aria-label="View image">
+                  <ion-icon name="expand-outline"></ion-icon>
+                </button>
+
+                <div class="card-content">
+                    <h3 class="h3">
+                    <a href="signup.html" class="card-title">Start Trading</a>
+                  </h3>
+                     <p class="card-text">  Once your account is funded, you can begin trading and taking advantage of our platform's features.</p><hr>
+                  
+                           <p class="card-text">If you need any assistance during the registration process, our customer support team is here to help</p>
+                                  <h3 class="h3">
+                    <a href="signup.html" class="card-title">Earn Money</a>
+                  </h3>
+                  <p class="card-text">Benefit from savings plans from $1, trading flat rate and interest with  Boon Growth Capital</p>
+                     
+              </div>
+            </li>
+
+            
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" aria-label="blog" id="blog">
+        <div class="container">
+
+          <h2 class="h2 section-title">Client Testimonials</h2>
+
+
+          <ul class="blog-list grid-list">
+
+            <li>
+              <div class="blog-card">
+
+              
+
+                <div class="card-content">
+
+                  <time class="card-meta" datetime="2022-08-02">
+                    <span class="span">15th May</span> 
+                  </time>
+
+                  <h3 class="h3 card-title">
+                    <a href="signup.html">
+                    
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    This is hands down the best investment website out there. The interface is user-friendly and the customer service is top-notch
+                  </p>
+
+                  <a href="#" class="btn-link">
+                    <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                    <span class="span">Reliable Rose</span>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+
+
+                <div class="card-content">
+
+                  <time class="card-meta" datetime="2022-08-21">
+                    <span class="span">09th May</span> 
+                  </time>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">
+                      
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    I've been using this platform for a year now and I'm extremely satisfied with the returns on my investments. Highly recommended
+                  </p>
+
+                  <a href="#" class="btn-link">
+                    <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                    <span class="span">Sweet Anita</span>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+                          <div class="blog-card">
+
+              
+
+                <div class="card-content">
+
+                  <time class="card-meta" datetime="2022-08-02">
+                    <span class="span">02nd May </span> 
+                  </time>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">
+                      
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                    I was hesitant at first, but after seeing consistent growth in my portfolio, I'm glad I chose this platform for my investments.
+                  </p>
+
+                  <a href="#" class="btn-link">
+                    <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                    <span class="span">David Tommy</span>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+
+
+                <div class="card-content">
+
+                  <time class="card-meta" datetime="2022-08-21">
+                    <span class="span">14th April </span> 
+                  </time>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">
+                      
+                    </a>
+                  </h3>
+
+                  <p class="card-text">
+                  The team behind this website is dedicated to helping their clients succeed. I've never felt more confident in my investment decisions
+                  </p>
+
+                  <a href="#" class="btn-link">
+                    <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+                    <span class="span">Soles Jorge</span>
+                  </a>
+
+                </div>
+
+              </div>
+            </li>
+
+
+          </ul>
+
+        </div>
+      </section>
+
+
+      <section class="about" aria-labelledby="about-label">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="neon.png" width="800" height="580" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle" id="about-label"></p>
+
+            <h2 class="h2 section-title">
+              Frequently Asked Questions
+            </h2>
+
+            <ul>
+
+              <li class="about-item">
+                <div class="accordion-card expanded" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">What investment options do you offer?</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    We offer a range of investment options including stocks, bonds, mutual funds, ETFs, and real estate investment trusts (REITs). Our platform provides access to diverse investment opportunities to suit your financial goals and risk tolerance
+                  </p>
+
+                </div>
+              </li>
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">How can I open an investment account?</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    
+                  Opening an investment account is simple and can be done online through our website. You'll need to provide some personal information, such as your name, contact details, and identification documents. Once your account is approved, you can start investing
+                  </p>
+
+                </div>
+              </li>
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">How do I manage my investments?</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    You can manage your investments conveniently through our online platform. You'll have access to real-time market data, portfolio performance reports, and tools to monitor and adjust your investment strategy as needed. Our team is also available to provide guidance and support
+                  </p>
+
+                </div>
+              </li>
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">Is my investment protected?</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    We take the security of your investments seriously. Our platform employs robust security measures, including encryption technology and multi-factor authentication, to safeguard your sensitive information and assets. Additionally, investments may be protected by regulatory schemes such as the Securities Investor Protection Corporation (SIPC) or insurance coverage
+                  </p>
+
+                </div>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #CONTACT
+      -->
+
+    
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+
+      <section class="section newsletter" aria-label="newsletter">
+        <div class="container">
+
+        
+
+          <div class="newsletter-content">
+
+            <h2 class="h2 section-title">Subscribe for offers and news</h2>
+
+            <form action="" class="newsletter-form">
+              <input type="email" name="email_address" placeholder="Enter Your Email" aria-label="email"
+                class="email-field">
+
+              <button type="submit" class="newsletter-btn">Subscribe Now</button>
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo">BoonGrowth Capital</a>
+
+          <p class="footer-text">
+            Let's collaborate to identify your current priorities and work towards building a brighter future for you and your family
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=61559870982135" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+
+
+
+
+
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Quick Links</p>
+          </li>
+
+          <li>
+            <a href="about.html" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="plans.html" class="footer-link">Investment Plans</a>
+          </li>
+
+          <li>
+            <a href="blog.html" class="footer-link">Blog</a>
+          </li>
+
+
+
+
+          <li>
+            <a href="contact.html" class="footer-link">Contact Us</a>
+          </li>
+          <li>
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="terms.html" class="footer-link">Terms & Condition</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2024 BoonGrowth Capital. All Rights Reserved by <a href="about.html" class="copyright-link">Boon</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+<script>
+        function calculateProfit() {
+        const plan = document.getElementById('plan').value;
+        const amount = parseFloat(document.getElementById('amount').value);
+        const days = parseInt(document.getElementById('days').value);
+
+        let minAmount, maxAmount, dailyRate;
+        switch(plan) {
+            case '1':
+                minAmount = 100;
+                maxAmount = 1000;
+                dailyRate = 0.015;
+                break;
+            case '2':
+                minAmount = 200;
+                maxAmount = 2000;
+                dailyRate = 0.02;
+                break;
+            case '3':
+                minAmount = 300;
+                maxAmount = 3000;
+                dailyRate = 0.035;
+                break;
+            default:
+                minAmount = 0;
+                maxAmount = 0;
+                dailyRate = 0;
+        }
+        const alertBox = document.getElementById('alert');
+        const resultBox = document.getElementById('result');
+
+        if (amount < minAmount || amount > maxAmount) {
+            alertBox.style.display = 'block';
+            alertBox.innerHTML = `Investment amount must be between $${minAmount} and $${maxAmount}.`;
+            resultBox.innerHTML = '';
+            return;
+        } else {
+            alertBox.style.display = 'none';
+        }
+
+        const profit = amount * dailyRate * days;
+        const totalAmount = amount + profit;
+
+        resultBox.innerHTML = `
+            <p>Investment Amount: $${amount.toFixed(2)}</p>
+            <p>Duration: ${days} days</p>
+            <p>Daily Rate: ${(dailyRate * 100).toFixed(2)}%</p>
+            <p>Total Profit: $${profit.toFixed(2)}</p>
+            <p>Total Amount: $${totalAmount.toFixed(2)}</p>
+        `;
+    }
+</script>
+    
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
