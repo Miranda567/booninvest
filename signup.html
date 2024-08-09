@@ -84,7 +84,7 @@
         return db.collection('users').doc(user.uid).set({
                     name: name,
           email: email,
-          balance: 0,
+          mainBalance: 0,
           totalProfit: 0,
           depositBalance: 0,
           withdrawalBalance: 0,
@@ -93,7 +93,7 @@
       })
       .then(function() {
         // Redirect user to dashboard or any other page
-        window.location.href = 'https://boon-dashboard-blush.vercel.app/.html';
+        window.location.href = 'https://boon-dashboard-blush.vercel.app/index.html';
       })
       .catch(function(error) {
         // Handle errors
