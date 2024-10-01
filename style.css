@@ -40,8 +40,9 @@
    * typography
    */
 
-  --ff-oswald: 'Oswald', sans-serif;
-  --ff-rubik: 'Rubik', sans-serif;
+
+  --ff-oswald: 'Sofia+Sans+Condensed', sans-serif;
+  --ff-rubik: 'Source+Serif+4', sans-serif;
 
   --fs-1: 6rem;
   --fs-2: 5rem;
@@ -168,8 +169,8 @@ html {
 body {
   background-color: var(--white);
   color: var(--onyx);
-  font-size: 1.6rem;
-  line-height: 1.7;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 :focus-visible { outline-offset: 4px; }
@@ -238,7 +239,7 @@ body {
   margin-block-end: 10px;
 }
 
-.section-text { line-height: 1.4; }
+.section-text { line-height: 1.8; }
 
 .btn {
   position: relative;
@@ -335,7 +336,8 @@ body {
 .logo {
   font-family: var(--ff-oswald);
   color: var(--white);
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .nav-open-btn {
@@ -442,7 +444,7 @@ body {
 
 .hero-title .span {
   color: var(--dark-orange);
-  font-size: var(--fs-2);
+  font-size: 12px;
   font-weight: var(--fw-700);
 }
 
@@ -509,12 +511,17 @@ body {
   background-color: var(--black_60);
   color: var(--white);
   text-align: center;
-  padding: 30px;
+  padding: 40px;
 }
 
 .hero-title .span {
   color: var(--dark-orange);
-  font-size: var(--fs-2);
+  font-size: 3rem;
+  font-weight: var(--fw-700);
+}
+.hero-title {
+  color: #fff;
+  font-size: 3rem;
   font-weight: var(--fw-700);
 }
 
@@ -1467,11 +1474,11 @@ body {
 
 .stats-title {
   color: var(--indigo-dye);
-  font-size: var(--fs-2);
-  font-weight: var(--fw-700);
+  font-size: 2rem;
+  font-weight: var(--fw-600);
 }
 
-.stats-text { font-size: var(--fs-8); }
+.stats-text { font-size: 16px; }
 
 
 .btns {
@@ -1739,16 +1746,16 @@ body {
 }
 
 .skills-title {
-  color: var(--indigo-dye);
-  font-size: var(--fs-5);
+  color: #333;
+  font-size: 1.5rem;
   font-family: var(--ff-barlow);
-  font-weight: var(--fw-600);
+  font-weight: var(--fw-400);
 }
 .skills-data {
-  color: var(--dark-orange);
-  font-size: var(--fs-5);
+  color: #333;
+  font-size: 1.5rem;
   font-family: var(--ff-barlow);
-  font-weight: var(--fw-600);
+  font-weight: var(--fw-400);
 }
 
 .skills-progress-box {

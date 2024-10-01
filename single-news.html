@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoonGrowth Capital</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+  
+ <style>
+    
+
+    .containera {
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    
+    .blog-post {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-post img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .blog-post h2 {
+      color: #333;
+      margin-top: 20px;
+    }
+
+    .meta-info {
+      margin: 10px 0;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .meta-info span {
+      margin-right: 15px;
+    }
+
+    .content {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .tags {
+      margin-top: 20px;
+    }
+
+    .tags span {
+      background-color: #e4e4e4;
+      padding: 5px 10px;
+      margin-right: 10px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    .share-buttons {
+      margin-top: 20px;
+    }
+
+    .share-buttons a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .share-buttons .facebook {
+      background-color: #3b5998;
+    }
+
+    .share-buttons .twitter {
+      background-color: #55acee;
+    }
+
+    .share-buttons .instagram {
+      background-color: #e4405f;
+    }
+
+    .related-news {
+      margin-top: 40px;
+    }
+
+    .related-news h3 {
+      margin-bottom: 20px;
+    }
+
+    .related-news .related-item {
+      background-color: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .related-news .related-item h4 {
+      margin: 0;
+    }
+
+    .related-news .related-item p {
+      color: #777;
+    }
+
+    
+  </style>
+  <!-- 
+    - preload images
+  -->
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="index.html" class="logo">BoonGrowth Capital</a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="index.html" class="logo">BoonGrowth Capital</a>
+
+          <button class="nav-close-btn" aria-label="Clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-link>
+              <span>Home</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link" data-nav-link>
+              <span>About</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="plans.html" class="navbar-link" data-nav-link>
+              <span>Investment Plans</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blog.html" class="navbar-link" data-nav-link>
+              <span>Blog</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>
+              <span>Contact</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+   <li class="navbar-item">
+            <a href="https://boon-dashboard-blush.vercel.app/signup.html" class="navbar-link" data-nav-link>
+              <span>Create account</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="https://boon-dashboard-blush.vercel.app/login.html" class="navbar-link" data-nav-link>
+              <span>Login</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <div class="header-contact">
+
+        <div>
+
+
+          
+        </div>
+
+
+
+      </div>
+
+      <button class="nav-open-btn" aria-label="Open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+
+<div class="containera">
+    <div class="blog-post">
+      <img src="https://via.placeholder.com/800x400" alt="Blog Image">
+      <h2>The Journey of Web Development</h2>
+      <div class="meta-info">
+        <span>Category: <strong>Technology</strong></span>
+        <span>Author: <strong>John Doe</strong></span>
+        <span>Date: <strong>September 25, 2024</strong></span>
+      </div>
+
+      <div class="content">
+        <p>Web development has evolved rapidly over the years. From the days of basic HTML to the dynamic JavaScript-powered websites of today, the journey has been extraordinary. The world of web development now offers numerous frameworks, libraries, and tools that make building websites faster and more efficient.</p>
+        <p>In this blog, we will explore some of the key technologies that have transformed the web landscape. We'll also look at the future of web development and what it holds for aspiring developers.</p>
+      </div>
+
+      <div class="tags">
+        <span>#WebDevelopment</span>
+        <span>#JavaScript</span>
+        <span>#Technology</span>
+      </div>
+
+      <div class="share-buttons">
+        <a href="https://facebook.com" class="facebook" target="_blank">F</a>
+        <a href="https://twitter.com" class="twitter" target="_blank">X</a>
+        <a href="https://instagram.com" class="instagram" target="_blank">IG</a>
+      </div>
+
+      <div class="related-news">
+        <h3>Related News</h3>
+
+        <div class="related-item">
+          <h4>Breaking Down JavaScript Frameworks</h4>
+          <p>Understand the differences between popular frameworks like React, Angular, and Vue.</p>
+        </div>
+
+        <div class="related-item">
+          <h4>The Future of CSS: What to Expect in 2025</h4>
+          <p>Discover the new CSS features that will change the way we design websites.</p>
+        </div>
+
+        <div class="related-item">
+          <h4>Best Practices for Responsive Web Design</h4>
+          <p>Learn the techniques to make your websites look great on all devices.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo">BoonGrowth Capital</a>
+
+          <p class="footer-text">
+            Let's collaborate to identify your current priorities and work towards building a brighter future for you and your family
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=61559870982135" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+
+
+
+
+
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Quick Links</p>
+          </li>
+
+          <li>
+            <a href="about.html" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="plans.html" class="footer-link">Investment Plans</a>
+          </li>
+
+          
+
+
+
+
+          <li>
+            <a href="contact.html" class="footer-link">Contact Us</a>
+          </li>
+          <li>
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="terms.html" class="footer-link">Terms & Condition</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2024 BoonGrowth Capital. All Rights Reserved by <a href="about.html" class="copyright-link">Boon</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+<script>
+        function calculateProfit() {
+        const plan = document.getElementById('plan').value;
+        const amount = parseFloat(document.getElementById('amount').value);
+        const days = parseInt(document.getElementById('days').value);
+
+        let minAmount, maxAmount, dailyRate;
+        switch(plan) {
+            case '1':
+                minAmount = 100;
+                maxAmount = 1000;
+                dailyRate = 0.015;
+                break;
+            case '2':
+                minAmount = 200;
+                maxAmount = 2000;
+                dailyRate = 0.02;
+                break;
+            case '3':
+                minAmount = 300;
+                maxAmount = 3000;
+                dailyRate = 0.035;
+                break;
+            default:
+                minAmount = 0;
+                maxAmount = 0;
+                dailyRate = 0;
+        }
+        const alertBox = document.getElementById('alert');
+        const resultBox = document.getElementById('result');
+
+        if (amount < minAmount || amount > maxAmount) {
+            alertBox.style.display = 'block';
+            alertBox.innerHTML = `Investment amount must be between $${minAmount} and $${maxAmount}.`;
+            resultBox.innerHTML = '';
+            return;
+        } else {
+            alertBox.style.display = 'none';
+        }
+
+        const profit = amount * dailyRate * days;
+        const totalAmount = amount + profit;
+
+        resultBox.innerHTML = `
+            <p>Investment Amount: $${amount.toFixed(2)}</p>
+            <p>Duration: ${days} days</p>
+            <p>Daily Rate: ${(dailyRate * 100).toFixed(2)}%</p>
+            <p>Total Profit: $${profit.toFixed(2)}</p>
+            <p>Total Amount: $${totalAmount.toFixed(2)}</p>
+        `;
+    }
+</script>
+    
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

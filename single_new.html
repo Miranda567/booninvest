@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A full blog post with share buttons and related news section">
+  <title>Full Story Blog Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    header {
+      background: #35424a;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    .blog-post {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-post img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .blog-post h2 {
+      color: #333;
+      margin-top: 20px;
+    }
+
+    .meta-info {
+      margin: 10px 0;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .meta-info span {
+      margin-right: 15px;
+    }
+
+    .content {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .tags {
+      margin-top: 20px;
+    }
+
+    .tags span {
+      background-color: #e4e4e4;
+      padding: 5px 10px;
+      margin-right: 10px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    .share-buttons {
+      margin-top: 20px;
+    }
+
+    .share-buttons a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .share-buttons .facebook {
+      background-color: #3b5998;
+    }
+
+    .share-buttons .twitter {
+      background-color: #55acee;
+    }
+
+    .share-buttons .instagram {
+      background-color: #e4405f;
+    }
+
+    .related-news {
+      margin-top: 40px;
+    }
+
+    .related-news h3 {
+      margin-bottom: 20px;
+    }
+
+    .related-news .related-item {
+      background-color: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .related-news .related-item h4 {
+      margin: 0;
+    }
+
+    .related-news .related-item p {
+      color: #777;
+    }
+
+    footer {
+      background-color: #35424a;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Awesome Blog</h1>
+  </header>
+
+  <div class="container">
+    <div id="article">
+    
+</div>
+
+      <div class="share-buttons">
+        <a href="" id="shareFacebook" class="facebook" target="_blank">F</a>
+        <a href="" id="shareTwitter" class="twitter" target="_blank">X</a>
+        <a href="" id="shareInstagram" class="instagram" target="_blank">IG</a>
+      </div>
+
+      <div class="related-news">
+        <h3>Related News</h3>
+
+        <div class="related-item">
+          <h4>Breaking Down JavaScript Frameworks</h4>
+          <p>Understand the differences between popular frameworks like React, Angular, and Vue.</p>
+        </div>
+
+        <div class="related-item">
+          <h4>The Future of CSS: What to Expect in 2025</h4>
+          <p>Discover the new CSS features that will change the way we design websites.</p>
+        </div>
+
+        <div class="related-item">
+          <h4>Best Practices for Responsive Web Design</h4>
+          <p>Learn the techniques to make your websites look great on all devices.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 My Awesome Blog. All Rights Reserved.</p>
+  </footer>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script>
+    // Initialize Firebase
+    var firebaseConfig = {
+        apiKey: "AIzaSyAtVvPjdsj84mWqaG4-7SyjbljCnslZ1SM",
+        authDomain: "hendaa-1.firebaseapp.com",
+        databaseURL: "https://hendaa-1-default-rtdb.firebaseio.com",
+        projectId: "hendaa-1",
+        storageBucket: "hendaa-1.appspot.com",
+        messagingSenderId: "831134776479",
+        appId: "1:831134776479:web:56cd7098fc69cd70a376aa"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    var db = firebase.firestore();
+
+    // Get the post ID from the URL
+    var urlParams = new URLSearchParams(window.location.search);
+    var postId = urlParams.get('id');
+
+    // Fetch the article and display it
+    function fetchArticle() {
+        db.collection("articles").doc(postId).get().then(function(doc) {
+            if (doc.exists) {
+                var post = doc.data();
+                var articleDiv = document.getElementById("article");
+                articleDiv.innerHTML = `
+    <div class="blog-post">
+    
+      ${post.featuredImage ? `<img src="${post.featuredImage}" alt="${post.title}">` : ''}
+      <h2>${post.title}</h2>
+
+   <div class="meta-info">
+        <span>Category: <strong>${post.categories}</strong></span>
+        <span>Author: <strong>${post.author}</strong></span>
+        <span>Date: <strong>September 25, 2024</strong></span>
+      </div>
+            <div class="content">
+        <p>
+                ${post.content}
+                </p>
+                      </div>
+                                `;
+
+     
+        const articleURL = window.location.href;
+                document.getElementById("facebookShare").href = `https://www.facebook.com/sharer/sharer.php?u=${articleURL}`;
+                document.getElementById("twitterShare").href = `https://twitter.com/intent/tweet?url=${articleURL}`;
+                document.getElementById("instagramShare").href = `https://www3.instagram.com/?url=${articleURL}`;
+            } else {
+                document.getElementById("article").innerHTML = "Article not found.";
+            }
+        });
+    }
+
+    // Initialize the article and comments on page load
+    fetchArticle();
+    
+        
+        </script>
+</body>
+</html>
